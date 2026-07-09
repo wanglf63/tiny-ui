@@ -1,0 +1,46 @@
+/*
+ * tiny-ui themes.css
+ * 产品品牌色映射层
+ *
+ * root.css 只提供 --primary 默认值(pcb-blue),不绑定具体产品。
+ * 本文件按 [data-product] 切换 --primary,各产品按需引入。
+ * 新增产品只需在此追加一行,无需改动 root.css。
+ *
+ * 用法:
+ *   <link rel="stylesheet" href="assets/root.css">
+ *   <link rel="stylesheet" href="assets/themes.css">
+ *   <link rel="stylesheet" href="assets/reset.css">
+ *   <link rel="stylesheet" href="assets/components.css">
+ *
+ *   <html data-product="shop" data-theme="light">
+ */
+
+/* ============================================================
+ *  产品品牌色覆盖
+ *  --primary 在 root.css 有默认值,此处按产品切换
+ *  --tiny-* 为跨产品导航提供的品牌色别名
+ * ============================================================ */
+
+[data-product="shop"] {
+  --primary:     var(--pcb-yellow);
+  --on-primary:  #451a03;
+  --tiny-shop:   var(--pcb-yellow);
+}
+
+[data-product="ems"] {
+  --primary:     var(--pcb-green);
+  --on-primary:  #ffffff;
+  --tiny-ems:    var(--pcb-green);
+}
+
+[data-product="dfm"] {
+  --primary:     var(--pcb-blue);
+  --on-primary:  #ffffff;
+  --tiny-dfm:    var(--pcb-blue);
+}
+
+[data-product="dashboard"] {
+  --primary:     var(--pcb-blue);
+  --on-primary:  #ffffff;
+  --tiny-dashboard: var(--pcb-blue);
+}

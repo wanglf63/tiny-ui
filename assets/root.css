@@ -1,0 +1,317 @@
+:root {
+  /* ============================================================
+   *  原始色板
+   * ============================================================ */
+
+  /* --- PCB 阻焊 --- */
+  --pcb-red:        #ef4444;
+  --pcb-red-50:     #fef2f2;
+  --pcb-red-100:    #fee2e2;
+  --pcb-red-200:    #fecaca;
+  --pcb-red-300:    #fca5a5;
+  --pcb-red-400:    #f87171;
+  --pcb-red-500:    #ef4444;
+  --pcb-red-600:    #dc2626;
+  --pcb-red-700:    #b91c1c;
+  --pcb-red-800:    #991b1b;
+  --pcb-red-900:    #7f1d1d;
+
+  --pcb-yellow:     #f59e0b;
+  --pcb-yellow-50:  #fffbeb;
+  --pcb-yellow-100: #fef3c7;
+  --pcb-yellow-200: #fde68a;
+  --pcb-yellow-300: #fcd34d;
+  --pcb-yellow-400: #fbbf24;
+  --pcb-yellow-500: #f59e0b;
+  --pcb-yellow-600: #d97706;
+  --pcb-yellow-700: #b45309;
+  --pcb-yellow-800: #92400e;
+  --pcb-yellow-900: #78350f;
+
+  --pcb-green:      #16b364;
+  --pcb-green-50:   #eefcf5;
+  --pcb-green-100:  #d8f9e8;
+  --pcb-green-200:  #b0f2d1;
+  --pcb-green-300:  #71eaad;
+  --pcb-green-400:  #2adf85;
+  --pcb-green-500:  #16b364;
+  --pcb-green-600:  #0e8f4f;
+  --pcb-green-700:  #0c6a3b;
+  --pcb-green-800:  #0b4b2b;
+  --pcb-green-900:  #072c1a;
+
+  --pcb-blue:       #6366f1;
+  --pcb-blue-50:    #eef2ff;
+  --pcb-blue-100:   #e0e7ff;
+  --pcb-blue-200:   #c7d2fe;
+  --pcb-blue-300:   #a5b4fc;
+  --pcb-blue-400:   #818cf8;
+  --pcb-blue-500:   #6366f1;
+  --pcb-blue-600:   #4f46e5;
+  --pcb-blue-700:   #4338ca;
+  --pcb-blue-800:   #3730a3;
+  --pcb-blue-900:   #312e81;
+
+  --pcb-black:      #1e293b;
+  --pcb-white:      #f1f5f9;
+
+  /* --- PCB 丝印 --- */
+  --silk-50:        #f8fafc;
+  --silk-100:       #f1f5f9;
+  --silk-200:       #e2e8f0;
+  --silk-300:       #cbd5e1;
+  --silk-400:       #94a3b8;
+  --silk-500:       #64748b;
+  --silk-600:       #475569;
+  --silk-700:       #334155;
+  --silk-800:       #1e293b;
+  --silk-900:       #0f172a;
+  --silk-950:       #020617;
+
+  /* ============================================================
+   *  语义色
+   * ============================================================ */
+
+  /* --- M3 Primary 主色系 --- */
+  --primary:                   var(--pcb-blue);
+  --on-primary:                #ffffff;
+  --primary-container:         var(--pcb-blue-100);
+  --on-primary-container:      var(--pcb-blue-900);
+  --primary-hover:             color-mix(in srgb, var(--primary) 88%, black);
+  --primary-active:            color-mix(in srgb, var(--primary) 76%, black);
+  --primary-fixed:             color-mix(in srgb, var(--primary) 20%, var(--surface-container-lowest));
+  --primary-fixed-dim:         color-mix(in srgb, var(--primary) 35%, var(--surface-container-lowest));
+
+  /* --- M3 Secondary 辅助色系 --- */
+  --secondary:                 var(--pcb-green);
+  --on-secondary:              #ffffff;
+  --secondary-container:       var(--pcb-green-100);
+  --on-secondary-container:    var(--pcb-green-900);
+  --secondary-hover:           color-mix(in srgb, var(--secondary) 88%, black);
+  --secondary-active:          color-mix(in srgb, var(--secondary) 76%, black);
+  --secondary-fixed:           color-mix(in srgb, var(--secondary) 20%, var(--surface-container-lowest));
+  --secondary-fixed-dim:       color-mix(in srgb, var(--secondary) 35%, var(--surface-container-lowest));
+
+  /* --- M3 Tertiary 第三色系 --- */
+  --tertiary:                  var(--pcb-yellow);
+  --on-tertiary:               #451a03;
+  --tertiary-container:        var(--pcb-yellow-100);
+  --on-tertiary-container:     var(--pcb-yellow-900);
+  --tertiary-hover:            color-mix(in srgb, var(--tertiary) 88%, black);
+  --tertiary-active:           color-mix(in srgb, var(--tertiary) 76%, black);
+  --tertiary-fixed:            color-mix(in srgb, var(--tertiary) 20%, var(--surface-container-lowest));
+  --tertiary-fixed-dim:        color-mix(in srgb, var(--tertiary) 35%, var(--surface-container-lowest));
+
+  /* --- M3 Error 错误色系 --- */
+  --error:                     var(--pcb-red);
+  --on-error:                  #ffffff;
+  --error-container:           var(--pcb-red-100);
+  --on-error-container:        var(--pcb-red-900);
+  --error-hover:               color-mix(in srgb, var(--error) 88%, black);
+  --error-active:              color-mix(in srgb, var(--error) 76%, black);
+  --error-fixed:               color-mix(in srgb, var(--error) 20%, var(--surface-container-lowest));
+  --error-fixed-dim:           color-mix(in srgb, var(--error) 35%, var(--surface-container-lowest));
+
+  /* --- M3 surface 背景系 --- */
+  --surface:                   #f8fafc;
+  --surface-dim:               #e6eaef;
+  --surface-bright:            #ffffff;
+  --surface-container-lowest:  #ffffff;
+  --surface-container-low:     #f8fafc;
+  --surface-container:         #f1f5f9;
+  --surface-container-high:    #e9eef3;
+  --surface-container-highest: #e2e8f0;
+  --on-surface:                #0f172a;
+  --on-surface-variant:        #64748b;
+  --inverse-surface:           #1e293b;
+  --inverse-on-surface:        #f1f5f9;
+  --outline:                   #94a3b8;
+  --outline-variant:           #e2e8f0;
+  --surface-tint:              var(--primary);
+  --background:                #f8fafc;
+  --on-background:             #0f172a;
+  --surface-variant:           #e2e8f0;
+
+  /* --- 边框与聚焦 --- */
+  --border-light:              var(--silk-200);
+  --border-default:            var(--silk-300);
+  --focus-ring:                0 0 0 2px var(--primary);
+
+  /* --- 暗色专用 --- */
+  --dark-bg:                   var(--silk-900);
+  --dark-surface:              var(--silk-800);
+  --dark-surface-secondary:    var(--silk-700);
+  --dark-border:               var(--silk-600);
+  --dark-text-primary:         var(--silk-50);
+  --dark-text-secondary:       var(--silk-400);
+
+  /* --- 业务状态 --- */
+  --status-danger:             #ef4444;  /* 危险 */
+  --status-warning:            #f97316;  /* 警告 */
+  --status-info:               #6366f1;  /* 信息 */
+  --status-security:           #06b6d4;  /* 安全 */
+  --status-success:            #16b364;  /* 成功 */
+  --status-neutral:            #475569;  /* 待办 */
+  --status-muted:              #94a3b8;  /* 取消 */
+
+  /* ============================================================
+   *  排版
+   * ============================================================ */
+
+  /* --- 字体 --- */
+  --font-mono:       "JetBrains Mono", "Sarasa Mono J", "Sarasa Mono SC", "Sarasa Mono TC", "Roboto Mono", "Liberation Mono", "Courier New", monospace;
+  --font-sans:       "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+
+  /* --- 字号 --- */
+  --text-xs:         12px;
+  --text-sm:         14px;
+  --text-base:       16px;
+  --text-lg:         18px;
+  --text-xl:         20px;
+  --text-2xl:        24px;
+  --text-3xl:        30px;
+  --text-4xl:        36px;
+  --text-5xl:        48px;
+  --text-6xl:        60px;
+
+  /* --- 字重 --- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* --- 字间距 --- */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.05em;
+  --tracking-wider:  0.06em;
+
+  /* --- 行高 --- */
+  --leading-none:    1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  /* ============================================================
+   *  尺度
+   * ============================================================ */
+
+  /* --- 间距 --- */
+  --space-0:      0px;
+  --space-1:      4px;
+  --space-2:      8px;
+  --space-3:      12px;
+  --space-4:      16px;
+  --space-5:      20px;
+  --space-6:      24px;
+  --space-8:      32px;
+  --space-10:     40px;
+  --space-12:     48px;
+  --space-16:     64px;
+  --space-20:     80px;
+  --space-24:     96px;
+
+  /* --- 圆角 --- */
+  --radius-sm:    2px;
+  --radius:       4px;
+  --radius-md:    6px;
+  --radius-lg:    8px;
+  --radius-xl:    12px;
+  --radius-2xl:   16px;
+  --radius-round: 9999px;
+
+  /* ============================================================
+   *  深度
+   * ============================================================ */
+
+  /* --- 光晕 --- */
+  --glow-red-sm:      0 0 6px rgba(239, 68, 68, 0.55), 0 0 2px rgba(239, 68, 68, 0.75);
+  --glow-red:         0 0 12px rgba(239, 68, 68, 0.55), 0 0 4px rgba(239, 68, 68, 0.75);
+  --glow-red-md:      0 0 18px rgba(239, 68, 68, 0.55), 0 0 6px rgba(239, 68, 68, 0.75);
+  --glow-red-lg:      0 0 28px rgba(239, 68, 68, 0.55), 0 0 10px rgba(239, 68, 68, 0.75);
+
+  --glow-yellow-sm:   0 0 6px rgba(245, 158, 11, 0.55), 0 0 2px rgba(245, 158, 11, 0.75);
+  --glow-yellow:      0 0 12px rgba(245, 158, 11, 0.55), 0 0 4px rgba(245, 158, 11, 0.75);
+  --glow-yellow-md:   0 0 18px rgba(245, 158, 11, 0.55), 0 0 6px rgba(245, 158, 11, 0.75);
+  --glow-yellow-lg:   0 0 28px rgba(245, 158, 11, 0.55), 0 0 10px rgba(245, 158, 11, 0.75);
+
+  --glow-green-sm:    0 0 6px rgba(22, 179, 100, 0.5), 0 0 2px rgba(22, 179, 100, 0.7);
+  --glow-green:       0 0 12px rgba(22, 179, 100, 0.5), 0 0 4px rgba(22, 179, 100, 0.7);
+  --glow-green-md:    0 0 18px rgba(22, 179, 100, 0.5), 0 0 6px rgba(22, 179, 100, 0.7);
+  --glow-green-lg:    0 0 28px rgba(22, 179, 100, 0.5), 0 0 10px rgba(22, 179, 100, 0.7);
+
+  --glow-blue-sm:     0 0 6px rgba(99, 102, 241, 0.55), 0 0 2px rgba(99, 102, 241, 0.75);
+  --glow-blue:        0 0 12px rgba(99, 102, 241, 0.55), 0 0 4px rgba(99, 102, 241, 0.75);
+  --glow-blue-md:     0 0 18px rgba(99, 102, 241, 0.55), 0 0 6px rgba(99, 102, 241, 0.75);
+  --glow-blue-lg:     0 0 28px rgba(99, 102, 241, 0.55), 0 0 10px rgba(99, 102, 241, 0.75);
+
+  /* --- 彩色阴影 --- */
+  --shadow-red-sm:    0 1px 2px rgba(239, 68, 68, 0.06);
+  --shadow-red:       0 2px 8px rgba(239, 68, 68, 0.08), 0 1px 2px rgba(239, 68, 68, 0.04);
+  --shadow-red-md:    0 4px 16px rgba(239, 68, 68, 0.12), 0 2px 4px rgba(239, 68, 68, 0.06);
+  --shadow-red-lg:    0 12px 32px rgba(239, 68, 68, 0.16), 0 4px 8px rgba(239, 68, 68, 0.08);
+
+  --shadow-yellow-sm: 0 1px 2px rgba(245, 158, 11, 0.06);
+  --shadow-yellow:    0 2px 8px rgba(245, 158, 11, 0.08), 0 1px 2px rgba(245, 158, 11, 0.04);
+  --shadow-yellow-md: 0 4px 16px rgba(245, 158, 11, 0.12), 0 2px 4px rgba(245, 158, 11, 0.06);
+  --shadow-yellow-lg: 0 12px 32px rgba(245, 158, 11, 0.16), 0 4px 8px rgba(245, 158, 11, 0.08);
+
+  --shadow-green-sm:  0 1px 2px rgba(14, 143, 79, 0.06);
+  --shadow-green:     0 2px 8px rgba(14, 143, 79, 0.08), 0 1px 2px rgba(14, 143, 79, 0.04);
+  --shadow-green-md:  0 4px 16px rgba(14, 143, 79, 0.12), 0 2px 4px rgba(14, 143, 79, 0.06);
+  --shadow-green-lg:  0 12px 32px rgba(14, 143, 79, 0.16), 0 4px 8px rgba(14, 143, 79, 0.08);
+
+  --shadow-blue-sm:   0 1px 2px rgba(99, 102, 241, 0.06);
+  --shadow-blue:      0 2px 8px rgba(99, 102, 241, 0.08), 0 1px 2px rgba(99, 102, 241, 0.04);
+  --shadow-blue-md:   0 4px 16px rgba(99, 102, 241, 0.12), 0 2px 4px rgba(99, 102, 241, 0.06);
+  --shadow-blue-lg:   0 12px 32px rgba(99, 102, 241, 0.16), 0 4px 8px rgba(99, 102, 241, 0.08);
+
+  /* --- 中性阴影 --- */
+  --shadow-ambient:   0 0 12px rgba(0, 0, 0, 0.15);
+  --shadow-card:      0 1px 2px rgba(0, 0, 0, 0.03);
+
+  /* ============================================================
+   *  动效与层级
+   * ============================================================ */
+
+  /* --- 动效 --- */
+  --duration-fast:   120ms;
+  --duration-base:   200ms;
+  --duration-slow:   320ms;
+  --ease-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:        cubic-bezier(0, 0, 0.2, 1);
+
+  /* --- 层级 --- */
+  --z-base:          0;
+  --z-dropdown:      1000;
+  --z-sticky:        1100;
+  --z-overlay:       1200;
+  --z-modal:         1300;
+  --z-toast:         1400;
+}
+
+/* ============================================================
+ *  暗色模式
+ * ============================================================ */
+
+[data-theme="dark"] {
+  --surface:                   #0b1326;
+  --surface-dim:               #0b1326;
+  --surface-bright:            #31394d;
+  --surface-container-lowest:  #060e20;
+  --surface-container-low:     #131b2e;
+  --surface-container:         #171f33;
+  --surface-container-high:    #222a3d;
+  --surface-container-highest: #2d3449;
+  --on-surface:                #dae2fd;
+  --on-surface-variant:        #bbcabf;
+  --inverse-surface:           #dae2fd;
+  --inverse-on-surface:        #283044;
+  --outline:                   #86948a;
+  --outline-variant:           #3c4a42;
+  --background:                #0b1326;
+  --on-background:             #dae2fd;
+  --surface-variant:           #2d3449;
+}
