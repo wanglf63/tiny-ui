@@ -1,21 +1,24 @@
-# tiny-ui — Tiny 家族设计系统
+# tiny-ui
 
-本文件是 **Google Stitch** 读取的设计系统入口,用于统一生成 Tiny 家族 4 个产品的前端界面。
+Tiny 家族产品的**设计系统源文件**。
 
-## 设计原则
+## 1. 设计原则
 
-- 视觉语言遵循 **Material Design 3**([m3.material.io](https://m3.material.io/))
-- 布局与工具类习惯参考 **Tailwind CSS**([tailwindcss.com](https://tailwindcss.com/))
-- 设计 token、组件结构、动效、阴影等细节以以上两套规范为准,本文件不重复定义
-- 本文件**只声明每个产品的主色与主题模式**,作为对默认规范的定制项
+唯一规范来源:M3。
 
-## 产品主色
+## 2. 产品主色
 
-主色取自 **Tailwind CSS** 色板。
+| 产品 | Source color | Hex | 主题模式 |
+|------|--------------|-----|--------|
+| tiny-dashboard | Indigo | `#6366f1` | Light |
+| tiny-ems       | Emerald | `#10b981` | Light |
+| tiny-shop      | Amber | `#f59e0b` | Light |
+| tiny-dfm       | Emerald | `#10b981` | **Dark** |
 
-| 产品 | 主色 token | 主题模式 |
-|------|------------|----------|
-| tiny-dashboard | `indigo-500` | Light |
-| tiny-ems       | `emerald-500` | Light |
-| tiny-shop      | `amber-500` | Light |
-| tiny-dfm       | `emerald-500` | **Dark** |
+## 3. 派生色生成工具
+
+| 工具 | 用途 |
+|------|------|
+| [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/) | 手动输入 hex 生成 light/dark 主题 |
+| [Material Color Utilities](https://github.com/material-foundation/material-color-utilities) | 官方 dynamic color 算法库 |
+| [Material Web tokens](https://github.com/material-components/material-web/tree/main/tokens) | 源码参考 |
